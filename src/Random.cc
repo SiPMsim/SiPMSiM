@@ -20,7 +20,7 @@
 #include "CLHEP/Random/MixMaxRng.h"
 #include "CLHEP/Random/Random.h"
 #include "CLHEP/Random/StaticRandomStates.h"
-#include "memory.h"
+#include "CLHEP/Utility/memory.h"
 #include "thread_local.h"
 #include "use_atomic.h"
 
