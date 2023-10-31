@@ -226,7 +226,7 @@ include/CLHEP/Vector/TwoVector.icc
   src/ZMinput.cc
 )
 
-target_compile_options(SiPM PRIVATE -lcnpy -lz --std=c++11 -pthread)
+target_compile_options(SiPM PRIVATE -lcnpy -lz --std=c++17 -pthread)
 
 
 TARGET_LINK_LIBRARIES(SiPM z
