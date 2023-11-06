@@ -108,7 +108,7 @@ B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (20
 
 ############# Optical photons #############
 
-If compiled as is, NPY file can be read with columns in the fallowinf order:
+If compiled as is, NPY file can be read with columns in the fallowing order:
 
 x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev)
 
