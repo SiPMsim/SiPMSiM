@@ -117,6 +117,6 @@ Important ! :
 
 Optical photons should be within the SiPM, code will exit if is not the case with out of bound error
 If one mendatory parameter is not present in SiPM.xml the code will also not run. 
-One can set noise values to zero if not inteded to be simulated but they still need to be described in SiPM.xml.
+One can set noise values to zero if not intended to be simulated but they still need to be described in SiPM.xml.
 
 ANY CONTRIBUTION IS WELCOMED !
