@@ -21,6 +21,7 @@
 		<property name="surface" value="XY"/>
 		<property name="stepSignal" value="1" unit="nanosecond"/>
 		<property name="durationPulse" value="300" unit="nanosecond"/>
+		<property name="sptr" value="125.4" unit="picosecond"/>
                 <property name="deadTime" value="0." unit="nanosecond"/>
                 <property name="tauRecovery" value="28.5" unit="nanosecond"/>
                 <property name="tauBuilk" value="11.26" unit="nanosecond"/>
