@@ -45,7 +45,7 @@ Run the jupyter notbook in exemple folder to see the result
 
 ###### Optional paramaters #######  
 
-PDE, SEED 
+PDE, SEED; SPTR
 
 ###### Custom parameters (one should use one of them at ounce. If several are present in SiPM.xml, the first one will be taken into account) #####
 
