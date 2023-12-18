@@ -41,7 +41,7 @@ open terminal in folder and type command
 Run the jupyter notbook in exemple folder to see the result
 
 
-############# SiPM.xml file instensiation ############# 
+############# SiPM.xml file instantiation ############# 
 
 ###### Optional paramaters #######  
 
@@ -88,7 +88,7 @@ Distance based (from firing microcell and sum should be equal to one) exemple:
 </propertyvector>
 
 
-Map based (sum equal to one, square of non pair dimensions, centre of square represents the firing microcell and probability should be set to zero) exemple:
+Map based (sum equal to one, square of non pair dimensions, centre of square represents the firing microcell and probability should be set to zero) example:
 
 <propertyvector name="CROSSTALK_MAP"  dim="3" >
 	<ve X="1" Y="1" value="0.125" ></ve>
