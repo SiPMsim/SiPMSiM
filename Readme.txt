@@ -72,7 +72,7 @@ Sampled signal exemple:
 </propertyvector>
 
 
-### Optical Crosstalk ###
+### Optical Crosstalk geometrical distribution ###
 
 Distance based (from firing microcell and sum should be equal to one) exemple:
 
