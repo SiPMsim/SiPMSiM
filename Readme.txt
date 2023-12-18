@@ -29,16 +29,16 @@ Go to build folder and type command
 ./SiPM "SiPM.xml file location" "name of SiPM in the xml file"  " file location of photons list to be processed in NPY format (should include x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev)) 
 
 
-Exemple: 
+Example: 
 
-Copy exemple folder to build folder
+Copy example folder to build folder
 Go to build folder
 Create a folder named result
 open terminal in folder and type command
 
-./SiPM ./exemple  mppc-13360-3050  ./exemple/XYZTime_ev.npy ./result
+./SiPM ./example  mppc-13360-3050  ./example/XYZTime_ev.npy ./result
 
-Run the jupyter notbook in exemple folder to see the result
+Run the jupyter notbook in example folder to see the result
 
 
 ############# SiPM.xml file instantiation ############# 
@@ -51,7 +51,7 @@ PDE, SEED; SPTR
 
 #### Signal shape ###
 
-Bi-exponential function exemple: 
+Bi-exponential function example: 
 
 <property name="tauRise" value="1" unit="nanosecond"/>
 <property name="tauFall" value="100" unit="nanosecond"/>
@@ -61,7 +61,7 @@ Spice model from F. Corsi et al., Nucl. Instrum. Methods Phys. Res. A (2007):
 
 <property name="circuit" Rs="value"  Rq="value"  Cd="value" Cq="value" Cg="value"/>
 
-Sampled signal exemple: 
+Sampled signal example: 
 
 <propertyvector name="PULSE" unit="nanosecond" >
 	<ve time="0.0" value="0.011675983255021347" ></ve>
@@ -74,7 +74,7 @@ Sampled signal exemple:
 
 ### Optical Crosstalk geometrical distribution ###
 
-Distance based (from firing microcell and sum should be equal to one) exemple:
+Distance based (from firing microcell and sum should be equal to one) example:
 
 <propertyvector name="CROSSTALK_DISPERTION" >
 	<ve value="9.32349329e-01"></ve>
