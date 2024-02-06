@@ -1,4 +1,4 @@
-WORK ON LINUX ONLY !!!
+WORKs ON LINUX ONLY !!!
 
 ############# References ############# 
 
