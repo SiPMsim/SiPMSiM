@@ -1,3 +1,5 @@
+WORK ON LINUX ONLY !!!
+
 ############# References ############# 
 
 This is a standalone version of a SiPM class initially developed to be incorporated into GATE. 
