@@ -1,4 +1,4 @@
-WORKS ON LINUX ONLY !!!
+THE CMAKEFILE WORKS ON LINUX ONLY !!! Libraries linking needs to be incorporated if running in MACOS
 
 ############# References ############# 
 
