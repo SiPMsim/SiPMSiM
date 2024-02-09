@@ -1,4 +1,4 @@
-THE CMAKELIST WORKS ON LINUX ONLY !!! Libraries linking needs to be incorporated if running in MACOS
+THE CMAKELISTS WORKS ON LINUX ONLY !!! Libraries linking needs to be incorporated if running in MACOS
 
 ############# References ############# 
 
