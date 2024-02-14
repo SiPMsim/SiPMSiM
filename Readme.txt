@@ -119,7 +119,7 @@ x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev)
 
 Important ! : 
 
-Optical photons should be within the SiPM, code will exit if is not the case with out of bound error
+Optical photons should be within the SiPM, code will exit if it is not the case with out of bound error.
 If one mendatory parameter is not present in SiPM.xml the code will also not run. 
 One can set noise values to zero if not intended to be simulated but they still need to be described in SiPM.xml.
 
