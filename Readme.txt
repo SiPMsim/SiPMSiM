@@ -5,10 +5,12 @@ THE CMAKELISTS WORKS ON LINUX ONLY !!! Libraries linking needs to be incorporate
 This is a standalone version of a SiPM class initially developed to be incorporated into GATE. 
 GATE and Geant4 are not required to run this code. 
 
+
 Implementation: B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (2022) P09025
 
 Experimental validation: B. Mehadji et al., Monte Carlo simulation of a scintillation crystal read by a SiPM with GATE, Nucl. Instrum. Meth. A 1048 (2023) 167905 
 
+Standalone version: B. Mehadji et al., A standalone Monte Carlo simulation toolkit at the micro-cell level to mimic SiPMs signals, IEEE MIC conf. rec., November 2023 
 
 ############# Compilation ############# 
 
