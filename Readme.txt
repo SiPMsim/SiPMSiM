@@ -13,6 +13,7 @@ Standalone version: B. Mehadji et al., A standalone Monte Carlo simulation toolk
 ############# Compilation ############# 
 
 #####For Linux#####
+Tested on Ubuntu 22.0.4
 
 Required packages:  libxml2-dev libgsl-dev zlib1g-dev
 Compile using cmake :
@@ -25,6 +26,7 @@ make
 make install 
 
 #####For MacOS#####
+Tested on Ventura 13.4
 
 Required packages:  libxml2 libgsl zlib1g (install usinf bew)
 Compile using cmake : 
