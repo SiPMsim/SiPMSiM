@@ -18,7 +18,6 @@ uint64_t SiPMPulse::currentId = 0;
 
 
 
-
 /*Create the files pulses.npy and signal.npy
 Note that pulses.npy is not fully implemented yet*/
 SiPM::SiPM(G4String result):
