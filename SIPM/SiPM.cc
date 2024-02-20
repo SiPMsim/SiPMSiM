@@ -27,8 +27,8 @@ SiPM::SiPM(G4String result):
       m_computerSignal(NULL),m_SPTR(0)
 {
 
-    G4String res = result;
-    m_file_Pulses.open(strcat(result.data(), "/pulses.npy"));
+  G4String res = result;
+  m_file_Pulses.open(strcat(result.data(), "/pulses.npy"));
 
   //these are specific to GATE and not used here
   //m_file_Pulses.register_variable("uid", &m_pulseID);
@@ -36,7 +36,6 @@ SiPM::SiPM(G4String result):
   //m_file_Pulses.register_variable("eventID", &m_eventID);
   //m_file_Pulses.register_variable("trackID", &m_trackID);
   m_file_Pulses.register_variable("generalDetId", &m_generalDetId);
-
 
   m_file_Pulses.register_variable("time", &m_current_time_value);
   m_file_Pulses.register_variable("primary_time", &m_time_primary_value);
@@ -47,6 +46,7 @@ SiPM::SiPM(G4String result):
   m_file_Pulses.register_variable("crosstalk_rand", &m_crosstalk_rand);
   m_file_Pulses.register_variable("seed", &m_seed);
 
+  G4String res = result;
   m_file.open(strcat(res.data(),"/signal.npy"));
   m_file.register_variable("time", &m_current_time_value);
   m_file.register_variable("value", &m_current_pulse_value);
