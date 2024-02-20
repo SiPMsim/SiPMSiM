@@ -1,5 +1,3 @@
-THE CMAKELISTS WORKS ON LINUX ONLY !!! Libraries linking needs to be incorporated if running in MACOS
-
 ############# References ############# 
 
 This is a standalone version of a SiPM class initially developed to be incorporated into GATE. 
@@ -14,9 +12,26 @@ Standalone version: B. Mehadji et al., A standalone Monte Carlo simulation toolk
 
 ############# Compilation ############# 
 
+#####For Linux#####
 
 Required packages:  libxml2-dev libgsl-dev zlib1g-dev
 Compile using cmake :
+create a build folder of custom name (for instance SiPM_build)
+open terminal in the build folder
+execute: 
+
+cmake "SiPM code folder directory"  
+make 
+make install 
+
+#####For MacOS#####
+
+Required packages:  libxml2 libgsl zlib1g (install usinf bew)
+Compile using cmake : 
+Copy and replace CMakeLists.txt from MacOS folder to the root of the package 
+Make sure the libgsl version is 2.7.1
+If not, change in CMakeLists.txt include_directories("/usr/local/gsl-2.7.1/") to include_directories("/usr/local/gsl-yourversion/")
+
 create a build folder of custom name (for instance SiPM_build)
 open terminal in the build folder
 execute: 
