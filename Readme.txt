@@ -28,7 +28,7 @@ make install
 #####For MacOS#####
 Tested on Ventura 13.4
 
-Required packages:  libxml2 libgsl zlib1g (install usinf bew)
+Required packages:  libxml2 libgsl zlib1g (install using brew)
 Compile using cmake : 
 Copy and replace CMakeLists.txt from MacOS folder to the root of the package 
 Make sure the libgsl version is 2.7.1
