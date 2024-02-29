@@ -375,6 +375,8 @@ void SiPM::generateAfterpulses ( )
   G4int x;
   G4int y;
   G4int i;
+  G4int h;
+      
 
   pos.value = G4UniformRand();
 
@@ -404,11 +406,12 @@ void SiPM::generateAfterpulses ( )
 
   std::vector<std::pair<G4int, G4int> > fired_cells;
   posct.value = G4UniformRand();
-  while (posct.value <= m_afterCrosstalk.back().value){
+  while (posct.value <= m_afterCrosstalk.back().value && h<=1000){
     //    G4cout << "generateAfterpulses creating aftercrosstalk  posct.value = " << posct.value << " m_afterCrosstalk.back().value = " <<  m_afterCrosstalk.back().value << G4endl;
 
     auto itap= std::lower_bound(m_afterCrosstalk.begin(), m_afterCrosstalk.end(), posct);
     auto time=itap->number;
+    h++;
 
     // calculate microCells to fire for delayed crosstalk
     auto microCell_concernedPos=microCellPos_k_to_i_j(m_pulse.microcell);
@@ -448,7 +451,7 @@ void SiPM::generateAfterpulses ( )
 
 void SiPM::generateCrosstalk (double A0)
 {
-  G4int i,y,x;
+  G4int i,y,x,h;
   SiPMProbs pos; // a probaliblity
   // calculate the number of crosstalks
   m_crosstalk_rand = pos.value = G4UniformRand();  // fnum  ]0,1[
@@ -460,8 +463,9 @@ void SiPM::generateCrosstalk (double A0)
 
   std::vector<std::pair<G4int, G4int> > fired_cells;
   i=0;
-  while (i < nbCrosstalk)
+  while (i < nbCrosstalk && h<=1000)
   {
+    h++;
     //    pos.value=rand()/(G4double)(RAND_MAX);
     if (m_Crossalk_map_bool)
     {
