@@ -375,7 +375,7 @@ void SiPM::generateAfterpulses ( )
   G4int x;
   G4int y;
   G4int i;
-  G4int h;
+  G4int h=0;
       
 
   pos.value = G4UniformRand();
@@ -451,7 +451,7 @@ void SiPM::generateAfterpulses ( )
 
 void SiPM::generateCrosstalk (double A0)
 {
-  G4int i,y,x,h;
+  G4int i=0,y,x,h=0;
   SiPMProbs pos; // a probaliblity
   // calculate the number of crosstalks
   m_crosstalk_rand = pos.value = G4UniformRand();  // fnum  ]0,1[
@@ -462,7 +462,7 @@ void SiPM::generateCrosstalk (double A0)
   // calculate microCells to fire for crosstalk
 
   std::vector<std::pair<G4int, G4int> > fired_cells;
-  i=0;
+
   while (i < nbCrosstalk && h<=1000)
   {
     h++;
