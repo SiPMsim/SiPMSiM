@@ -864,7 +864,7 @@ void SiPM::setSiPMFromXml  (G4String location, G4String type){
                 }
                 if (property == "seed"){
                   m_seed=value;
-                  m_seed_bool=True;
+                  m_seed_bool=true;
                 }
                 if (property == "tauRecovery"){
                   unit = G4UIcmdWithADoubleAndUnit::GetNewDoubleValue(unitstr.c_str());
