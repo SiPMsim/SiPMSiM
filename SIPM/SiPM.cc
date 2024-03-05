@@ -503,7 +503,7 @@ void SiPM::initializeSignal()
   G4Random::setTheEngine(new CLHEP::RanecuEngine());
   G4long seed;
 
-  if (m_seed)
+  if (m_seed_bool)
   {
     seed =  m_seed;
   }
@@ -864,6 +864,7 @@ void SiPM::setSiPMFromXml  (G4String location, G4String type){
                 }
                 if (property == "seed"){
                   m_seed=value;
+                  m_seed_bool=True;
                 }
                 if (property == "tauRecovery"){
                   unit = G4UIcmdWithADoubleAndUnit::GetNewDoubleValue(unitstr.c_str());
