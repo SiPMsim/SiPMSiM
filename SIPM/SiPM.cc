@@ -509,7 +509,6 @@ void SiPM::initializeSignal()
   }
   else
   {
-    std::cout << "in"<< std::endl;
     seed = time(NULL);
   }
   G4Random::setTheSeed(seed);
