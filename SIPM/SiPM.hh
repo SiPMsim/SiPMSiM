@@ -358,6 +358,7 @@ public:
   GateSiPMSignal* p_signal_concerned;
   PDE *m_pde;
   G4bool m_use_pde= false;
+  G4bool m_seed_bool=false;
   G4double m_tauRise_ns;
   G4double m_tauFall_ns;
   G4double m_startSignal;
