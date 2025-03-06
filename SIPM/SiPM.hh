@@ -282,54 +282,64 @@ public:
 
 
 class PDE
+
 {
   public:
       std::vector<G4double> ev;
       std::vector<G4double> pde;
-
-
-
-
   void add_pair(G4double x, G4double y)
   {
      ev.push_back(x);
      pde.push_back(y);
   }
-
   G4double compute( G4double x_new){
       G4double dx, dy, m, b;
-      auto it = std::lower_bound(ev.begin(), ev.end(), x_new);
-      //for (G4double i: ev)
-
-      std::size_t idx = std::distance(ev.begin(), it);
-
-      if (idx==0)
-      {
-
-        dx = (ev[idx + 1] - ev[idx]);
-        dy = (pde[idx + 1] - pde[idx]);
-      }
-      else if (ev[idx-1] < x_new)
-      {   idx=idx-1;
-          dx = ev[idx] - ev[idx-1] ;
-          dy = pde[idx] - pde[idx-1] ;
-      }
-      else
-      { idx=idx-1;
-        dx = ev[idx + 1] - ev[idx] ;
-        dy = pde[idx + 1] - pde[idx] ;
-      }
-
-      m = dy / dx;
-      b = pde[idx] - ev[idx] * m;
-
-      if ((x_new * m + b) <0)
-          return 0;
-
-      return x_new * m + b;
+    // Check if only one PDE value is provided
+    if (ev.size() == 1) {
+        //G4cout << "Only one pde value given and returned" << G4endl;
+        return pde[0];  // Just return the single PDE value
+    }
+    auto it = std::lower_bound(ev.begin(), ev.end(), x_new);
+    std::size_t idx = std::distance(ev.begin(), it);
+    G4cout << "idx: " << idx << G4endl;
+    // Handle extrapolation when x_new is out of bounds
+    if (idx == 0) {
+        // Extrapolate to the left
+        dx = ev[1] - ev[0];
+        dy = pde[1] - pde[0];
+        m = dy / dx;
+        b = pde[0] - ev[0] * m;
+        //G4cout << "Extrapolating to the left" << G4endl;
+    } else if (idx == ev.size()) {
+        // Extrapolate to the right
+        dx = ev[ev.size() - 1] - ev[ev.size() - 2];
+        dy = pde[ev.size() - 1] - pde[ev.size() - 2];
+        m = dy / dx;
+        b = pde[ev.size() - 1] - ev[ev.size() - 1] * m;
+        //G4cout << "Extrapolating to the right" << G4endl;
+    } else {
+        // Interpolate between ev[idx - 1] and ev[idx]
+        dx = ev[idx] - ev[idx - 1];
+        dy = pde[idx] - pde[idx - 1];
+        m = dy / dx;
+        b = pde[idx] - ev[idx] * m;
+        //G4cout << "Interpolating between points" << G4endl;
+    }
+    G4double result = m * x_new + b;
+    // Ensure that the result is within [0, 1]
+    if (result > 1) {
+        //G4cout << "Interpolated value exceeds 1, returning 1" << G4endl;
+        return 1;
+    }
+    if (result < 0) {
+        //G4cout << "Interpolated value is less than 0, returning 0" << G4endl;
+        return 0;
+    }
+    return result;
   }
+};
 
- };
+ 
 
 
 class SiPM
