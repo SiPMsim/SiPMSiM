@@ -132,7 +132,7 @@ B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (20
 
 If compiled as is, NPY file can be read with columns in the fallowing order:
 
-x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev)
+x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in MeV)
 
 
 Important ! : 
