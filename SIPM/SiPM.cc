@@ -130,7 +130,7 @@ void SiPM::createSignal(){
       auto& pulse1= m_SiPMPulsesTable.front();
       //specific to GATE not used here
       //m_pulse.trackID = pulse1.trackID;
-      //m_pulse.typePulse=pulse1.typePulse;
+      m_pulse.typePulse=pulse1.typePulse;
       m_pulse.generalDetId=pulse1.generalDetId;
       m_generalDetId=pulse1.generalDetId;
       //m_pulse.runID = pulse1.runID;
@@ -561,7 +561,7 @@ void SiPM::initializeSignal()
       }
 
 
-      G4double timing=0;
+      G4double timing=startSignal;
       G4double current_time_value;
       G4double cpt=0;
       while (timing < this->getDurationSignal())
