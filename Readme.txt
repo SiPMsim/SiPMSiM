@@ -1,8 +1,11 @@
-############# References ############# 
-
 This is a standalone version of a SiPM class initially developed to be incorporated into GATE. 
+The simulation accounts for the spatial distribution of the optical photons impinging onto the SiPM surface, as well as spatial distribution of noise. 
+Photons list to be processed should include x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev). 
 GATE and Geant4 are not required to run this code. 
 This code is freely available for non-commercial purposes. 
+
+############# References ############# 
+
 Research works utilizing this code are required to cite at least one of the following references:
 
 Implementation: B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (2022) P09025
