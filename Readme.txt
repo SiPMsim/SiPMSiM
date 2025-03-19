@@ -1,5 +1,7 @@
-This is a standalone version of a SiPM class initially developed to be incorporated into GATE. 
-The simulation accounts for the spatial distribution of the optical photons impinging onto the SiPM surface, as well as spatial distribution of noise. 
+This is a standalone implementation of a SiPM class originally developed for integration into GATE. It is capable of generating realistic analog signals and has been experimentally validated by coupling an MPPC to a LYSO crystal wrapped in Teflon.
+Performance evaluation demonstrated less than a 2% difference in timing when using a high-frequency readout. 
+Additionally, energy resolution and saturation measurements showed a relative difference of less than 2%, confirming the accuracy of the model.
+Particularly, the simulation accounts for the spatial distribution of the optical photons impinging onto the SiPM surface, as well as spatial distribution of noise. 
 Photons list to be processed should include x(in mm),y(in mm),z (in mm),time (in ns) and optionally energy (in ev). 
 GATE and Geant4 are not required to run this code. 
 This code is freely available for non-commercial purposes. 
