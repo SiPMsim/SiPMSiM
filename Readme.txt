@@ -1,3 +1,11 @@
+Research works utilizing this code are required to cite at least one of the following references:
+
+Implementation: B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (2022) P09025
+
+Experimental validation: B. Mehadji et al., Monte Carlo simulation of a scintillation crystal read by a SiPM with GATE, Nucl. Instrum. Meth. A 1048 (2023) 167905 
+
+Standalone version: B. Mehadji et al., A standalone Monte Carlo simulation toolkit at the micro-cell level to mimic SiPMs signals, IEEE MIC conf. rec., November 2023 
+
 This is a standalone implementation of a SiPM class originally developed for integration into GATE. It is capable of generating realistic analog signals and has been experimentally validated by coupling an MPPC to a LYSO crystal wrapped in Teflon.
 Performance evaluation demonstrated less than a 2% difference in timing when using a high-frequency readout. 
 Additionally, energy resolution and saturation measurements showed a relative difference of less than 2%, confirming the accuracy of the model.
@@ -6,15 +14,7 @@ Photons list to be processed should include x(in mm),y(in mm),z (in mm),time (in
 GATE and Geant4 are not required to run this code. 
 This code is freely available for non-commercial purposes. 
 
-############# References ############# 
 
-Research works utilizing this code are required to cite at least one of the following references:
-
-Implementation: B. Mehadji et al., Monte Carlo simulation of SiPMs with GATE, J. Instrum. 17 (2022) P09025
-
-Experimental validation: B. Mehadji et al., Monte Carlo simulation of a scintillation crystal read by a SiPM with GATE, Nucl. Instrum. Meth. A 1048 (2023) 167905 
-
-Standalone version: B. Mehadji et al., A standalone Monte Carlo simulation toolkit at the micro-cell level to mimic SiPMs signals, IEEE MIC conf. rec., November 2023 
 
 ############# Compilation ############# 
 
